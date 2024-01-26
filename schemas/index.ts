@@ -1,1 +1,3 @@
-export const schemaTypes = []
+import nft from './nft'
+
+export const schemaTypes = [nft]
