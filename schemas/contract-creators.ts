@@ -15,11 +15,23 @@ export default defineType({
       type: 'array',
       title: 'Contract Addresses',
       of: [
-        defineField({
-          name: 'contract_address',
-          type: 'string',
-          title: 'Contract Address',
-        }),
+        {
+          name: 'contract_details',
+          type: 'object',
+          title: 'Contract Details',
+          fields: [
+            defineField({
+              name: 'address',
+              type: 'string',
+              title: 'Address',
+            }),
+            {
+              name: 'name',
+              type: 'reference',
+              to: [{type: 'nft'}],
+            },
+          ],
+        },
       ],
     },
   ],
