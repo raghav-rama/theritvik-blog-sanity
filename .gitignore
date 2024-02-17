@@ -27,3 +27,6 @@
 
 # Dotenv and similar local-only files
 *.local
+
+delete.js
+mutation_response.json
