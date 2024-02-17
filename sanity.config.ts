@@ -8,10 +8,10 @@ const devOnlyPlugins = [getStartedPlugin()]
 
 export default defineConfig({
   name: 'default',
-  title: 'MintPass: An NFT Gatekeeper',
+  title: "Ritvik's Blog",
 
   projectId: '0iqh09v1',
-  dataset: 'production',
+  dataset: 'theritvik-blog',
 
   plugins: [structureTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
 
@@ -19,4 +19,3 @@ export default defineConfig({
     types: schemaTypes,
   },
 })
-
