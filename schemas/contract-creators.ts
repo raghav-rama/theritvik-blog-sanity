@@ -1,22 +1,28 @@
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'contract_creators',
+  name: 'contractCreators',
   title: 'Contract Creators',
   type: 'document',
   fields: [
-    defineField({
-      name: 'creator',
-      type: 'string',
-      title: 'Creator',
-    }),
     {
-      name: 'contract_addresses',
+      name: 'creatorName',
+      type: 'string',
+      title: 'Creator Name',
+    },
+    {
+      name: 'creator',
+      type: 'reference',
+      title: 'Creator',
+      to: [{type: 'users'}],
+    },
+    {
+      name: 'contractAddresses',
       type: 'array',
       title: 'Contract Addresses',
       of: [
         {
-          name: 'contract_details',
+          name: 'contractDetails',
           type: 'object',
           title: 'Contract Details',
           fields: [
@@ -26,7 +32,8 @@ export default defineType({
               title: 'Address',
             }),
             {
-              name: 'name',
+              name: 'nft',
+              title: 'NFT',
               type: 'reference',
               to: [{type: 'nft'}],
             },
