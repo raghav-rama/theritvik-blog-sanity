@@ -1,5 +1,9 @@
-import nft from './nft'
-import contractCreators from './contract-creators'
-import users from './users'
+import {SchemaTypeDefinition} from 'sanity'
 
-export const schemaTypes = [nft, contractCreators, users]
+import blockContent from './blockContent'
+import post from './post'
+
+export const schemaTypes = [post, blockContent]
+export const schema: {types: SchemaTypeDefinition[]} = {
+  types: schemaTypes,
+}

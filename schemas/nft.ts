@@ -1,4 +1,4 @@
-import {defineType, defineField} from 'sanity'
+import {defineType, defineField, defineArrayMember} from 'sanity'
 
 export default defineType({
   name: 'nft',
@@ -25,12 +25,12 @@ export default defineType({
       type: 'string',
       title: 'Image URL',
     }),
-    {
+    defineField({
       name: 'attributes',
       type: 'array',
       title: 'Attributes',
       of: [
-        {
+        defineArrayMember({
           name: 'traits',
           type: 'object',
           title: 'Traits',
@@ -46,8 +46,8 @@ export default defineType({
               title: 'Value',
             }),
           ],
-        },
+        }),
       ],
-    },
+    }),
   ],
 })
