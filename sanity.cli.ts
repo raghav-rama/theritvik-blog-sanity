@@ -5,4 +5,5 @@ export default defineCliConfig({
     projectId: '0iqh09v1',
     dataset: 'production',
   },
+  studioHost: 'theritvik-blog',
 })
